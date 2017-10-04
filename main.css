@@ -8,6 +8,7 @@ body {
 }
 
 .shell-bl-bought, .shell-bl-list {
+
     background-color: #DADADA;
     padding: 15px;
     display: inline-block;
@@ -22,7 +23,9 @@ body {
 .shell-bl-list {
     width: 70%;
 }
-
+.for-js{
+    display: none;
+}
 .bl-list, .bl-bought {
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);
     border-radius: 5px;
@@ -34,9 +37,10 @@ body {
 }
 
 .bl-row {
-    display: block;
+
     border-top: 1px solid rgba(34,36,38,.15);
     padding: 7px;
+    display: block;
 }
 
 .bl-product_name, .bl-count, .bl-buttons {
@@ -55,6 +59,7 @@ body {
 }
 
 .add-row {
+
     position: relative;
     display: flex;
     flex-direction: row;
@@ -62,6 +67,7 @@ body {
 }
 
 .add-field {
+
     flex: auto;
     height: 37px;
     box-sizing: border-box;
@@ -127,35 +133,43 @@ body {
 }
 
 .bl-buttons-cancel {
-    width: 32px;
+     width: 32px;
 
-    background-color: #DB2828;
-    box-shadow: 0 -.3em 0 0 rgba(34,36,38,.15) inset;
-    color: white;
+     background-color: #DB2828;
+     box-shadow: 0 -.3em 0 0 rgba(34,36,38,.15) inset;
+     color: white;
 
-    font-weight: 600;
-    font-size: 12px;
-    margin-right: 8px;
+     font-weight: 600;
+     font-size: 12px;
+     margin-right: 8px;
 
-    border: none;
-    border-radius: 6px;
+     border: none;
+     border-radius: 6px;
 
+     cursor: pointer;
+     outline: none;
+ }
+.bl-buttons-cancel:hover {
+    background-color: #b2020a;
     cursor: pointer;
-    outline: none;
 }
-
 .bl-buttons-boughted {
     width: 80px;
+
+    background-color: #a8a8b2;
+
 
     font-family: inherit;
     font-weight: 600;
 
     margin-right: 3px;
 
-    background-color: ;
-    color: rgba(0,0,0,.6);
+    background-color: rgba(34,36,38,.15);
 }
-
+.bl-buttons-boughted:hover {
+    background-color: #a6e8e9;
+    cursor: pointer;
+}
 /*
 *
 *Центральна колонка - назва товару (ліва колонка)
@@ -341,4 +355,81 @@ body {
         min-width: 583px;
     }
 
+}
+.badge{
+
+
+    position: fixed;
+
+    border: 2px solid rgba(0, 0, 0, 0.56);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px ;
+    width: 110px;
+    height: 150px;
+
+    bottom: -90px;
+    background-color: #ff730e;
+
+    transition:	all	1.5s	ease;
+
+}
+.badge:hover{
+    background-color: #1e0f58;
+    transform: translate(0px, -50px);
+    color: #d2d2d2;
+}
+.badge-text{
+    margin-top: 20px;
+    margin-left: 12px;
+    margin-right: 0px;
+
+}
+.badge-text2{
+    margin-top: 20px;
+    margin-left: 8px;
+}
+.badge-text{
+     font-family: sans-serif;
+
+     font-size: 25px;
+ }
+.badge-text3{
+    font-family: "Tahoma";
+    margin-left: 8px;
+    font-size: 13px;
+}
+.badge-text2{
+    font-family: "Franklin Gothic Medium";
+
+    font-size: 15px;
+}
+@media print{
+    .badge-text{
+       display: none;
+    }
+}
+
+
+button::after {
+    background: rgba(154, 37, 151, 0.8);
+    border-radius: 4px ;
+    color: #FFF;
+    content: attr(data-tooltip);
+
+    min-width: 100px;
+    z-index: 1;
+    margin-top: -24px;
+    margin-left: -15px;
+    opacity: 0;
+    padding: 3px 7px;
+    position: absolute;
+
+    visibility: hidden;
+
+    transition: all 0.5s ease;
+}
+
+button:hover::after {
+    opacity: 1;
+    visibility: visible;
 }
