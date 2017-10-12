@@ -2,101 +2,76 @@
 <html>
 <head lang="uk">
     <meta charset="UTF-8">
-    <title>Buy List</title>
-
-
+    <title>Game list</title>
     <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 <body>
-<!-- Центральна колнка -->
+<!-- Центральна колoнка -->
 <div class="bl-background">
-
     <div class="shell-bl-list">
         <div class="bl-list">
-
             <div class="add-row-shell">
                 <div class="add-row">
-                    <input type="text" placeholder="Назва товару" class="add-field" required>
-                    <button type="submit" class="add-button" data-tooltip="It is button Oo">Додати</button>
+                    <input type="text" placeholder="Назва товару" class="add-field">
+                    <button type="submit" class="add-button" data-tooltip="Додати до списку товар">Додати</button>
                 </div>
             </div>
-            <!-- Товар для JavaScript -->
-            <div class="for-js">
-            <div class="bl-row">
-                <div class="bl-buttons">
-                    <div class="bl-buttons-shell">
-                        <button class="bl-buttons-boughted" data-tooltip="It is button Oo">Купленo</button>
-                        <button class="bl-buttons-cancel" data-tooltip="It is button Oo">×</button>
+            <div id="item">
+                <div class="bl-row">
+                    <div class="bl-buttons">
+                        <div class="bl-buttons-shell">
+                            <button class="bl-buttons-boughted" data-tooltip="Списати товар">Купленo</button>
+                            <button class="bl-buttons-cancel" data-tooltip="Видалити товар">×</button>
+                        </div>
+                    </div>
+                    <div class="bl-product_name">
+                        <span class="bl-product_label">Pattern</span>
+                        <input type="text" value="Pattern">
+                    </div>
+                    <div class="bl-count">
+                        <button class="bl-minus-nonactive" data-tooltip="Зменшити"><span class="button-minus-label">-</span></button>
+                        <span class="bl-label">1</span>
+                        <button class="bl-plus" data-tooltip="Збільшити">+</button>
                     </div>
                 </div>
-                <div class="bl-product_name">
-                    <span class="bl-product_label">Drake</span>
-                </div>
-                <div class="bl-count">
-                    <button class="bl-minus" data-tooltip="It is button Oo"><span class="button-minus-label">-</span></button>
-                    <span class="bl-label">5</span>
-                    <button class="bl-plus" data-tooltip="It is button Oo">+</button>
-                </div>
             </div>
-
-            </div>
-            <!-- Кінець списку тестових товарів -->
         </div>
     </div>
-    <!-- Права колонка -->
     <div class="shell-bl-bought">
         <div class="bl-bought">
             <div class="bl-title"><h3>Залишилося</h3></div>
-            <div class="bl-row-right">
-                        <span class="bl-bought-last">
-                            <span class="bl-row-right-name">Drake</span>
-                            <span class="bl-last-item-count">5</span>
-                        </span>
-                <span class="bl-bought-last">
-                            <span class="bl-row-right-name">Kanye West</span>
-                            <span class="bl-last-item-count">2</span>
-                        </span>
-                <span class="bl-bought-last">
-                            <span class="bl-row-right-name">Sia</span>
-                            <span class="bl-last-item-count">7</span>
-                        </span>
-                <span class="bl-bought-last">
-                            <span class="bl-row-right-name">Lady Gaga</span>
-                            <span class="bl-last-item-count">1</span>
-                        </span>
+            <div class="bl-row-right last">
+                <span id="last-pattern">
+                                <span class="bl-bought-last">
+                                    <span class="bl-row-right-name">Pattern</span>
+                                    <span class="bl-last-item-count">1</span>
+                                </span>
+                            </span>
             </div>
             <div class="bl-title"><h3>Куплено</h3></div>
-            <div class="bl-row-right">
-                        <span class="bl-bought-bought">
-                            <span class="bl-row-bought-name">Daft Punk</span>
-                            <span class="bl-bought-item-count">3</span>
-                        </span>
-                <span class="bl-bought-bought">
-                            <span class="bl-row-bought-name">Dragons</span>
-                            <span class="bl-bought-item-count">6</span>
-                        </span>
-                <span class="bl-bought-bought">
-                            <span class="bl-row-bought-name">Adele</span>
-                            <span class="bl-bought-item-count">7</span>
-                        </span>
-                <span class="bl-bought-bought">
-                            <span class="bl-row-bought-name">Lady Gaga</span>
-                            <span class="bl-bought-item-count">5</span>
+            <div class="bl-row-right bought">
+
+
+                <span id="bought-pattern">
+                            <span class="bl-bought-bought">
+                                <span class="bl-row-bought-name ">Pattern</span>
+                                <span class="bl-bought-item-count">1</span>
+                            </span>
                         </span>
             </div>
         </div>
     </div>
-    <!-- Кінець правої колонки -->
+    <div class="badge">
+        <div class="badge-preview">
+            <span>Buy List</span>
+        </div>
+        <div class="badge-content">
+            <div>Created by:</div>
+            <div class="badge-content-name">Denys Baranov</div>
+        </div>
+    </div>
 </div>
-
-<div class="badge">
-    <div class="badge-text">Buy List</div>
-    <div class="badge-text2">Сreated by:</div>
-    <div class="badge-text3"><b>Denys Baranov</b></div>
-</div>
-
-<script type="text/javascript"src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
-<script type="text/javascript"src="main.js"> </script>
-
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
